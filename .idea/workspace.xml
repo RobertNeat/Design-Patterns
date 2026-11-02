@@ -5,46 +5,280 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3c1bb97d-64bc-4cbe-ad07-04a8d8fe4628" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/robert_neat/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/iterator/IteratorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/komenda/CommandMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/maszyna_stanu/StateMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/mediator/MediatorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/metoda_szablonowa/TemplateMethodMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/obserwator/ObserverMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/odwiedzający/VisitorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/pamiątka/MementoMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/strategia/StrategyMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/behawioralne/łańcuch_zobowiązań/ChainOfResponsibilityMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/kreacyjne/budowniczy/BuilderMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/kreacyjne/fabryka_abstrakcyjna/AbstractFactoryMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/kreacyjne/metoda_wytwórcza/FactoryMethodMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/kreacyjne/prototyp/PrototypeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/kreacyjne/singleton/SingletonMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/adapter/AdapterMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/dekorator/DecoratorMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/fasada/FacadeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/kompozyt/CompositeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/most/BridgeMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/pełnomocnik/ProxyMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/design_patterns/strukturalne/pyłek/FlyweightMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/robert_neat/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/design_patterns/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 2,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3LY0m7uMctvyTSlINDGa6K4Zyp5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.BuilderMain.executor": "Run",
     "Application.Main.executor": "Run",
+    "Application.run_builder.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "feat/wzorce__kreacyjne",
     "kotlin-language-version-configured": "true",
     "onboarding.tips.debug.path": "P:/Design-Patterns/src/main/java/robert_neat/Main.java",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "File.Encoding",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RunManager" selected="Application.run_visitor">
+    <configuration name="run_abstract_factory" type="Application" factoryName="Application" folderName="kreacyjne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="abstract_factory" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_adapter" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="adapter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_bridge" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="bridge" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_builder" type="Application" factoryName="Application" folderName="kreacyjne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="builder" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_chain_of_responsibility" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="chain_of_responsibility" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_command" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="command" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_composite" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="composite" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_decorator" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="decorator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_facade" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="facade" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_facotry_method" type="Application" factoryName="Application" folderName="kreacyjne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="factory_method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_flyweight" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="flyweight" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_iterator" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="iterator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_mediator" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="mediator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_memento" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="memento" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_observer" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="observer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_prototype" type="Application" factoryName="Application" folderName="kreacyjne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="prototype" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_proxy" type="Application" factoryName="Application" folderName="strukturalne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="proxy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_singleton" type="Application" factoryName="Application" folderName="kreacyjne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="singleton" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_state" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="state" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_strategy" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="strategy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_template_method" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="template_method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="run_visitor" type="Application" factoryName="Application" folderName="behawioralne">
+      <option name="MAIN_CLASS_NAME" value="design_patterns.Main" />
+      <module name="Design-Patterns" />
+      <option name="PROGRAM_PARAMETERS" value="visitor" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.run_builder" />
+      <item itemvalue="Application.run_abstract_factory" />
+      <item itemvalue="Application.run_facotry_method" />
+      <item itemvalue="Application.run_prototype" />
+      <item itemvalue="Application.run_singleton" />
+      <item itemvalue="Application.run_adapter" />
+      <item itemvalue="Application.run_bridge" />
+      <item itemvalue="Application.run_composite" />
+      <item itemvalue="Application.run_decorator" />
+      <item itemvalue="Application.run_facade" />
+      <item itemvalue="Application.run_flyweight" />
+      <item itemvalue="Application.run_proxy" />
+      <item itemvalue="Application.run_chain_of_responsibility" />
+      <item itemvalue="Application.run_command" />
+      <item itemvalue="Application.run_iterator" />
+      <item itemvalue="Application.run_mediator" />
+      <item itemvalue="Application.run_memento" />
+      <item itemvalue="Application.run_observer" />
+      <item itemvalue="Application.run_state" />
+      <item itemvalue="Application.run_strategy" />
+      <item itemvalue="Application.run_template_method" />
+      <item itemvalue="Application.run_visitor" />
+    </list>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3c1bb97d-64bc-4cbe-ad07-04a8d8fe4628" name="Changes" comment="" />
@@ -52,22 +286,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1793615850864</updated>
-      <workItem from="1793615853978" duration="321000" />
+      <workItem from="1793615853978" duration="4295000" />
+      <workItem from="1793620265261" duration="2592000" />
+      <workItem from="1793625524930" duration="2750000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/robert_neat/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
