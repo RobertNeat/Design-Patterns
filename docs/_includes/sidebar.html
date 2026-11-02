@@ -1,0 +1,39 @@
+<nav class="sidebar">
+  <div class="accordion accordion-flush" id="pattern-accordion">
+    {% for category in site.data.patterns %}
+      {% assign section_has_active = false %}
+      {% for p in category.patterns %}
+        {% assign pattern_url = "/" | append: category.key | append: "/" | append: p.slug | append: "/" | relative_url %}
+        {% if page.url == pattern_url %}
+          {% assign section_has_active = true %}
+        {% endif %}
+      {% endfor %}
+      <div class="accordion-item bg-transparent border-0">
+        <button
+          class="section-toggle{% unless section_has_active %} collapsed{% endunless %}"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapse-{{ category.key }}"
+          aria-expanded="{% if section_has_active %}true{% else %}false{% endif %}"
+          aria-controls="collapse-{{ category.key }}"
+        >
+          {{ category.name }}
+        </button>
+        <div
+          id="collapse-{{ category.key }}"
+          class="accordion-collapse collapse{% if section_has_active %} show{% endif %}"
+        >
+          <div class="nav flex-column">
+            {% for p in category.patterns %}
+              {% assign pattern_url = "/" | append: category.key | append: "/" | append: p.slug | append: "/" | relative_url %}
+              <a
+                class="nav-link{% if page.url == pattern_url %} active{% endif %}"
+                href="{{ pattern_url }}"
+              >{{ p.name }}</a>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</nav>

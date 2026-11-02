@@ -1,0 +1,80 @@
+- key: kreacyjne
+  name: Kreacyjne
+  patterns:
+    - name: Singleton
+      slug: singleton
+      use: "Jedna wspólna konfiguracja restauracji: nazwa, stawka VAT, godziny otwarcia"
+    - name: Factory Method
+      slug: factory-method
+      use: "Tworzenie dań zależnie od kategorii: zupa, danie główne, deser"
+    - name: Abstract Factory
+      slug: abstract-factory
+      use: "Całe zestawy menu zależnie od kuchni: włoska, polska, wegańska"
+    - name: Builder
+      slug: builder
+      use: "Składanie złożonego zamówienia: stolik, dania, uwagi, kod rabatowy, napiwek"
+    - name: Prototype
+      slug: prototype
+      use: "Klonowanie gotowych zestawów, na przykład „lunch dnia”, z drobnymi zmianami"
+
+- key: strukturalne
+  name: Strukturalne
+  patterns:
+    - name: Adapter
+      slug: adapter
+      use: "Integracja z zewnętrznym systemem płatności o niezgodnym interfejsie"
+    - name: Bridge
+      slug: bridge
+      use: "Rozdzielenie rodzaju zamówienia (na miejscu, na wynos, dostawa) od sposobu realizacji"
+    - name: Composite
+      slug: composite
+      use: "Menu jako drzewo: kategorie zawierają dania i podkategorie, zestawy zawierają dania"
+    - name: Decorator
+      slug: decorator
+      use: "Dodatki do dań: dodatkowy ser, ostry sos, większa porcja, każdy zmienia cenę i opis"
+    - name: Facade
+      slug: facade
+      use: "Jeden prosty punkt wejścia do składania zamówienia, który ukrywa kuchnię, płatności i rabaty"
+    - name: Flyweight
+      slug: flyweight
+      use: "Współdzielenie obiektów typu przepis, alergen, ikona dania między tysiącami pozycji"
+    - name: Proxy
+      slug: proxy
+      use: "Kontrola dostępu i cache: na przykład tylko menedżer może zmieniać ceny, a menu jest cache'owane"
+
+- key: behawioralne
+  name: Behawioralne
+  patterns:
+    - name: Strategy
+      slug: strategy
+      use: "Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta"
+    - name: Observer
+      slug: observer
+      use: "Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia"
+    - name: State
+      slug: state
+      use: "Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane"
+    - name: Command
+      slug: command
+      use: "Operacje na zamówieniu jako obiekty, z możliwością cofnięcia: dodaj danie, usuń danie"
+    - name: Chain of Responsibility
+      slug: chain-of-responsibility
+      use: "Kolejne kroki walidacji i rabatów: poprawność zamówienia, dostępność składników, kod promocyjny"
+    - name: Template Method
+      slug: template-method
+      use: "Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii"
+    - name: Iterator
+      slug: iterator
+      use: "Przechodzenie po menu lub historii zamówień bez ujawniania struktury"
+    - name: Mediator
+      slug: mediator
+      use: "Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł"
+    - name: Memento
+      slug: memento
+      use: "Zapis i przywracanie stanu zamówienia, na przykład wersja robocza lub cofnięcie zmian"
+    - name: Visitor
+      slug: visitor
+      use: "Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny"
+    - name: Interpreter
+      slug: interpreter
+      use: "Prosty język reguł rabatowych, na przykład „WTOREK AND SUMA > 100 THEN 10%”"

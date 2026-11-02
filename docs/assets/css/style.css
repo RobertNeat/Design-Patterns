@@ -1,0 +1,133 @@
+:root {
+  --dp-light: #8b9eb7;
+  --dp-dark: #2f415d;
+  --dp-mid: #4c5e7a;
+
+  --bs-primary: var(--dp-mid);
+  --bs-primary-rgb: 76, 94, 122;
+  --bs-link-color: var(--dp-mid);
+  --bs-link-hover-color: var(--dp-dark);
+}
+
+body {
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-dp {
+  background-color: var(--dp-dark);
+}
+
+.navbar-dp .navbar-brand {
+  color: #fff;
+  font-weight: 600;
+}
+
+.navbar-dp .navbar-brand img {
+  height: 36px;
+  margin-right: 0.5rem;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: var(--dp-dark);
+  min-height: 100%;
+  padding: 1rem 0;
+}
+
+.sidebar .section-toggle {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .section-toggle:hover,
+.sidebar .section-toggle[aria-expanded="true"] {
+  background-color: var(--dp-mid);
+  border-left-color: var(--dp-light);
+}
+
+.sidebar .section-toggle::after {
+  content: "\25BE";
+  float: right;
+  transition: transform 0.2s ease;
+}
+
+.sidebar .section-toggle.collapsed::after {
+  transform: rotate(-90deg);
+}
+
+.sidebar .nav-link {
+  color: var(--dp-light);
+  padding: 0.4rem 1.5rem;
+  font-size: 0.95rem;
+  border-left: 3px solid transparent;
+}
+
+.sidebar .nav-link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.sidebar .nav-link.active {
+  color: #fff;
+  background-color: var(--dp-mid);
+  border-left-color: var(--dp-light);
+  font-weight: 600;
+}
+
+/* Cards used on the index page */
+.category-card .card-header {
+  background-color: var(--dp-dark);
+  color: #fff;
+  cursor: pointer;
+}
+
+.category-card .card-header:hover {
+  background-color: var(--dp-mid);
+}
+
+.category-card .list-group-item {
+  border-left: 3px solid transparent;
+}
+
+.category-card .list-group-item:hover {
+  border-left-color: var(--dp-mid);
+  background-color: #f4f6f9;
+}
+
+/* Pattern page */
+.pattern-section h2 {
+  color: var(--dp-dark);
+  border-bottom: 2px solid var(--dp-light);
+  padding-bottom: 0.3rem;
+  margin-top: 2rem;
+}
+
+.badge-category {
+  background-color: var(--dp-mid);
+  color: #fff;
+}
+
+.placeholder-box {
+  background-color: #f4f6f9;
+  border: 1px dashed var(--dp-light);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  color: #5a6b82;
+}
+
+footer {
+  background-color: var(--dp-dark);
+  color: var(--dp-light);
+}
+
+footer a {
+  color: #fff;
+}

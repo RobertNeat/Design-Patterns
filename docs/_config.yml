@@ -1,0 +1,19 @@
+title: Design Patterns
+description: Wzorce projektowe GoF na przykładzie restauracji
+baseurl: "/Design-Patterns"
+url: ""
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
