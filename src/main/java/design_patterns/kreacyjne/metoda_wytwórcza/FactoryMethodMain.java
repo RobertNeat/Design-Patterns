@@ -1,5 +1,8 @@
 package design_patterns.kreacyjne.metoda_wytwórcza;
 /*
+* Używanie różnych 'klas produktów'
+* dla n 'klas produktów tworzy się 2n+2 klas i interfejsów
+*
 * # KEY-DEFINITIONS:
 * PRODUKT - interfejs, wspólny dla wszystkich klas produktów
 * (konkretne) PRODUKTY - niezależne względem siebie typy produktów zgodne z klasą-produktem
