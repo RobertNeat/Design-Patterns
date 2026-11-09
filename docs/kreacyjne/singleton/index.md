@@ -6,43 +6,24 @@ category: Kreacyjne
 <span class="badge badge-category mb-3">Kreacyjne</span>
 
 <div class="pattern-section">
-<h2>Cel</h2>
+<h2>Singleton</h2>
 <div class="placeholder-box">
-TODO: krotki opis celu wzorca Singleton.
+Zapewnia istnienie wyłącznie jednej instancji danej klasy i daje globalny punkt dostępu do tej instancji. Rozwiązuje dwa problemy jednocześnie kontrolę liczby obiektów (najczęściej po to, by kontrolować dostęp do współdzielonego zasobu, np. bazy danych lub pliku) oraz globalny dostęp do obiektu, bez ryzyka jego nadpisania, które niosą zmienne globalne. Zwykły konstruktor nie może tego zapewnić, bo z definicji zawsze zwraca nowy obiekt. Wzorzec proponuje uczynić konstruktor prywatnym oraz utworzyć statyczną metodę kreacyjną (np. getInstance), która przy pierwszym wywołaniu tworzy obiekt i zapisuje go w polu statycznym, a przy kolejnych zwraca już istniejący egzemplarz (leniwa inicjalizacja). Ograniczeniem jest to, że wzorzec łamie zasadę pojedynczej odpowiedzialności, może maskować zły projekt (komponenty wiedzą o sobie zbyt wiele), wymaga specjalnej uwagi w środowisku wielowątkowym i utrudnia testy jednostkowe, ponieważ trudno stworzyć atrapę singletona.
 </div>
 
-<h2>Problem</h2>
+<h2>#_Image</h2>
 <div class="placeholder-box">
-TODO: jaki problem rozwiazuje ten wzorzec.
+
+1. Klasa **singletona** deklaruje statyczną meyodę getInstance, która zawsze zwraca tę samą instancję swej klasy. Konstruktor klasy singleton musi być ukryty przed kodem klienckim. Tylko i wyłącznie wywołanie metody getInstance powinno dawać dostęp do takiego obiektu. 
+
 </div>
 
-<h2>Rozwiazanie</h2>
+<h2>Zastosowanie</h2>
 <div class="placeholder-box">
-TODO: opis podejscia zastosowanego przez wzorzec.
+
+- potrzeba wykonania pojedynczego ogólno dostępnego obiektu danej klasy (np. połaczenia z bazą danych),
+- ścisła kontrola nad zmiennymi globalnymi,
+
+</div>
 </div>
 
-<h2>Struktura</h2>
-<div class="placeholder-box">
-TODO: diagram UML / struktura klas.
-</div>
-
-<h2>Zastosowanie w restauracji</h2>
-<div class="placeholder-box">
-Jedna wspólna konfiguracja restauracji: nazwa, stawka VAT, godziny otwarcia
-</div>
-
-<h2>Implementacja</h2>
-<div class="placeholder-box">
-TODO: link do kodu / przykladu implementacji w module Maven.
-</div>
-
-<h2>Zalety i wady</h2>
-<div class="placeholder-box">
-TODO: zalety i wady wzorca Singleton.
-</div>
-
-<h2>Powiazane wzorce</h2>
-<div class="placeholder-box">
-TODO: odnosniki do powiazanych wzorcow.
-</div>
-</div>
