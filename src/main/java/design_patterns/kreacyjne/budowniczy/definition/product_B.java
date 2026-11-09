@@ -5,9 +5,9 @@ public class product_B{
     private long val_B;
     private boolean val_C;
 
-    public product_B(int val_A, long val_B, boolean val_C){
-        this.val_A=val_A;
-        this.val_B=val_B;
-        this.val_C=val_C;
+    public product_B(builder_B builder){
+        this.val_A=builder.getVal_A();
+        this.val_B=builder.getVal_B();
+        this.val_C=builder.isVal_C();
     }
 }

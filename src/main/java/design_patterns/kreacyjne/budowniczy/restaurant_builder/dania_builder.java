@@ -4,28 +4,32 @@ public class dania_builder implements builder{
     int talerz;
     String skladniki;
     @Override
-    public void reset() {
+    public builder reset() {
         talerz=1;
+        return this;
     }
 
     @Override
-    public void przyjecie() {
+    public builder przyjecie() {
         talerz=-1;
         skladniki="";
+        return this;
     }
 
     @Override
-    public void realizacja() {
+    public builder realizacja() {
         skladniki+="salata,ogorek,smietana";
+        return  this;
     }
 
     @Override
-    public void przekazanie() {
+    public builder przekazanie() {
         skladniki+=",sos";
+        return this;
     }
 
     public posilek getResult(){
-        posilek pos=new posilek(talerz, skladniki);
+        posilek pos=new posilek(this);
         this.reset();
         return pos;
     }

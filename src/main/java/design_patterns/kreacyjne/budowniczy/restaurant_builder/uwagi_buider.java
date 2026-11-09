@@ -4,27 +4,31 @@ public class uwagi_buider implements builder{
     String notatka;
 
     @Override
-    public void reset() {
+    public builder reset() {
         notatka="";
+        return this;
     }
 
     @Override
-    public void przyjecie() {
+    public builder przyjecie() {
         notatka="uwagi klienta";
+        return this;
     }
 
     @Override
-    public void realizacja() {
+    public builder realizacja() {
         //uwaga nie ma realizacji, celowy brak implementacji
+        return this;
     }
 
     @Override
-    public void przekazanie() {
+    public builder przekazanie() {
         notatka+=",podpis osoby przyjmującej";
+        return this;
     }
 
     public uwaga getResult(){
-        uwaga uw=new uwaga(this.notatka);
+        uwaga uw=new uwaga(this);
         this.reset();
         return uw;
     }

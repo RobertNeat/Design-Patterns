@@ -40,6 +40,11 @@ public class BuilderMain {
          stolik_builder builder2 = new stolik_builder();
          manager.przygotuj_zamowienie(builder2);
          zamowienie zam = builder2.getResult();
+
+         //lub jeśli by była implementacja bez kierownika
+         dania_builder standalone = new dania_builder();
+         standalone.przyjecie().realizacja().przekazanie();
+         //^ dzięki zastosowwaniu typów zwracanych jako interfejs, ale wtedy trzeba dodać getResult do interfejsu,
      }
 
      public static void runabstract(){
@@ -54,6 +59,11 @@ public class BuilderMain {
          builder_B builder_2 = new builder_B();
          director.constructproduct_B(builder_2,123);
          product_B prod_2 = builder_2.getResult();
+
+         //lub jeśli by była implementacja bez kierownika
+         builder_A standalone = new builder_A();
+         standalone.setValueA(123).setValueB(123).setValueC(true);
+         //^ dzięki zastosowwaniu typów zwracanych jako interfejs, ale wtedy trzeba dodać getResult do interfejsu,
      }
 
 }

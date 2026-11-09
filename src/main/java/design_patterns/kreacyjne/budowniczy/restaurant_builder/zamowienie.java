@@ -5,9 +5,9 @@ public class zamowienie {
     String platnosc;
     Boolean danie_wydane;
 
-    public zamowienie(String lista_zamowienia, String platnosc, Boolean danie_wydane) {
-        this.lista_zamowienia = lista_zamowienia;
-        this.platnosc = platnosc;
-        this.danie_wydane = danie_wydane;
+    public zamowienie(stolik_builder builder) {
+        this.lista_zamowienia = builder.lista_zamowienia;
+        this.platnosc = builder.platnosc;
+        this.danie_wydane = builder.danie_wydane;
     }
 }

@@ -6,30 +6,44 @@ public class builder_B implements builder{
     private boolean val_C;
 
     @Override
-    public void reset() {
+    public builder reset() {
         val_A=0;
         val_B=0;
         val_C=false;
+        return this;
     }
 
     @Override
-    public void setValueA(int ValA) {
+    public builder setValueA(int ValA) {
         this.val_A = ValA-1;
+        return this;
     }
 
     @Override
-    public void setValueB(long ValB) {
+    public builder setValueB(long ValB) {
         this.val_B = ValB-2;
+        return this;
     }
 
     @Override
-    public void setValueC(Boolean ValC) {
+    public builder setValueC(Boolean ValC) {
         this.val_C = ValC;
+        return this;
     }
 
     public product_B getResult(){
-        product_B result = new product_B(this.val_A, this.val_B, this.val_C);
-        reset();
-        return result;
+        return new product_B(this);
+    }
+
+    public int getVal_A() {
+        return val_A;
+    }
+
+    public long getVal_B() {
+        return val_B;
+    }
+
+    public boolean isVal_C() {
+        return val_C;
     }
 }
