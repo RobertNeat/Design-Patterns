@@ -8,15 +8,14 @@ package design_patterns.kreacyjne.metoda_wytwórcza;
 * (konkretne) PRODUKTY - niezależne względem siebie typy produktów zgodne z klasą-produktem
 * TWÓRCA - klasa deklarująca bazową metodę wytwórczą
 * (konkretni) TWÓRCY - nadpisują bazową metodę wytwórczą zwracając różny typ produktów
+*
+* Metoda wytwórcza na przykładzie kateogrii i dań
+* klasa 'Danie' (interfejs) - jest produktem jaki otrzymuje klasa-klient, każdy produkt implementuje metody 'jedz()', i 'naczynie()'
+* klasy 'Przystawka','Zupa','Danie Główne','Deser' - konkretne produkty jakie są produkowane
+* klasa 'Fabryka Dań' (abstrakcyjna) - klasa-twórca deklarująca metodę wytwórczą, która zwraca nowe obiekty-produkty
+* klasy 'Fabryka Przystawek','Fabryka Zup','Fabryka Dań Głównych', 'Fabryka Deserów' - konkretni twórcy nadpisujący metodę wytwórczą
+* klient wywołuje inicjalizacje na 'Daniu' albo 'Fabryce Dań' i wywołuje zgodne akcje na wybanej klasie konkretnego produktu
 */
-
-// Metoda wytwórcza na przykładzie kateogrii i dań
-// klasa 'Danie' (interfejs) - jest produktem jaki otrzymuje klasa-klient, każdy produkt implementuje metody 'jedz()', i 'naczynie()'
-// klasy 'Przystawka','Zupa','Danie Główne','Deser' - konkretne produkty jakie są produkowane
-// klasa 'Fabryka Dań' (abstrakcyjna) - klasa-twórca deklarująca metodę wytwórczą, która zwraca nowe obiekty-produkty
-// klasy 'Fabryka Przystawek','Fabryka Zup','Fabryka Dań Głównych', 'Fabryka Deserów' - konkretni twórcy nadpisujący metodę wytwórczą
-// klient wywołuje inicjalizacje na 'Daniu' albo 'Fabryce Dań' i wywołuje zgodne akcje na wybanej klasie konkretnego produktu
-
 
 import design_patterns.kreacyjne.metoda_wytwórcza.dania.FabrykaDan;
 import design_patterns.kreacyjne.metoda_wytwórcza.dania.fabryki.FabrykaDanGlownych;

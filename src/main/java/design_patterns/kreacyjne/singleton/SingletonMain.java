@@ -1,6 +1,9 @@
 package design_patterns.kreacyjne.singleton;
 
 /*
+* Zapewnienie istnienia globalnie dostępnej pojedynczej instancji danej klasy (np. konfiguracji).
+*
+* # KEY-DEFINITIONS:
 * SINGLETON - klasa ze statycznymi polami i prywatnym konstruktorem i metodą getInstance ograniczającą ilość istniejących instancji
 *
 * SingletonDefinition

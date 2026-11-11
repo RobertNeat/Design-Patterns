@@ -1,6 +1,9 @@
 package design_patterns.kreacyjne.prototyp;
 
 /*
+* Kopiowanie istniejących obiektów (oddelegowane do obiketu kopiowanego) bez tworzenia zależności między kodem a klasami istniejących obiektów.
+*
+* # KEY-DEFINITIONS:
 * REJESTR PROTOTYPÓW(*) - udostępnia łatwy dostęp do często używnaych prototypów, przechowuje zestaw prefabrykowanych obiektów które są gotowe do skopiowania (najprościej tablica asocjacyjna nazwa->prototyp)
 * PROTOTYP - interfesj, deklaruje metody klanujące (zazwyczaj pojedyncza metoda 'clone()')
 * (konkretny) PROTOTYP - implementuje metodę klanującą
