@@ -2,47 +2,28 @@
 title: Composite
 category: Strukturalne
 ---
-
 <span class="badge badge-category mb-3">Strukturalne</span>
 
+
 <div class="pattern-section">
-<h2>Cel</h2>
+<h2>Kompozyt</h2>
 <div class="placeholder-box">
-TODO: krotki opis celu wzorca Composite.
+
 </div>
 
-<h2>Problem</h2>
+<h2>#_Image</h2>
 <div class="placeholder-box">
-TODO: jaki problem rozwiazuje ten wzorzec.
+
+1.
+
 </div>
 
-<h2>Rozwiazanie</h2>
+<h2>Zastosowanie</h2>
 <div class="placeholder-box">
-TODO: opis podejscia zastosowanego przez wzorzec.
-</div>
 
-<h2>Struktura</h2>
-<div class="placeholder-box">
-TODO: diagram UML / struktura klas.
-</div>
+-
+- 
 
-<h2>Zastosowanie w restauracji</h2>
-<div class="placeholder-box">
-Menu jako drzewo: kategorie zawierają dania i podkategorie, zestawy zawierają dania
-</div>
 
-<h2>Implementacja</h2>
-<div class="placeholder-box">
-TODO: link do kodu / przykladu implementacji w module Maven.
-</div>
-
-<h2>Zalety i wady</h2>
-<div class="placeholder-box">
-TODO: zalety i wady wzorca Composite.
-</div>
-
-<h2>Powiazane wzorce</h2>
-<div class="placeholder-box">
-TODO: odnosniki do powiazanych wzorcow.
 </div>
 </div>
