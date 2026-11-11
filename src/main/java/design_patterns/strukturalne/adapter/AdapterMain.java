@@ -28,7 +28,6 @@ import design_patterns.strukturalne.adapter.definition_extended.Adapter_ex;
 import design_patterns.strukturalne.adapter.definition_extended.ClientInterface_ex;
 import design_patterns.strukturalne.adapter.definition_extended.Service_ex;
 import design_patterns.strukturalne.adapter.external_payment.PaymentAdapter;
-import design_patterns.strukturalne.adapter.external_payment.PaymentInterface;
 import design_patterns.strukturalne.adapter.external_payment.PaymentService;
 
 public class AdapterMain {
