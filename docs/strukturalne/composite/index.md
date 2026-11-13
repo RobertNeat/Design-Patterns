@@ -4,10 +4,11 @@ category: Strukturalne
 ---
 <span class="badge badge-category mb-3">Strukturalne</span>
 
-
 <div class="pattern-section">
 <h2>Kompozyt</h2>
-**Kompozyt** - pozwala komponować obiekty w struktury drzewiaste i traktować je tak, jakby były pojedynczymi obiektami. Ma sens, gdy model aplikacji da się przedstawić jako drzewo (np.proste produkty i opakowania, które mogą zawierać zarówno produkty, jak i inne mniejsze opakowania). Wzorzec proponuje wspólny interfejs dla elementów prostych (liści) i złożonych (kontenerów), deklarujący operacje sensowne dla obu typów. Liść wykonuje pracę bezpośrednio, natomiast kontener nie zna konkretnych klas swojej zawartości - deleguje żądanie wszystkim elementom podrzędnym poprzez interfejs komponentu, zbiera wyniki pośrednie i zwraca wynik końcowy. Ponieważ kontener sam może zawierać inne kontenery, operacja wykonuje się rekurencyjnie po całym drzewie. Dzięki temu klient korzysta ze wszystkich elementów przez jeden wspólny interfejs i nie musi wiedzieć, czy ma do czynienia z prostym elementem, czy ze złożoną strukturą. Ograniczeniem jest to, że ustalenie jednego wspólnego interfejsu dla klas o bardzo różnych funkcjonalnościach bywa trudne i może wymagać jego nadmiernego uogólnienia.
+
+Pozwala komponować obiekty w struktury drzewiaste i traktować je tak, jakby były pojedynczymi obiektami. Ma sens, gdy model aplikacji da się przedstawić jako drzewo (np.proste produkty i opakowania, które mogą zawierać zarówno produkty, jak i inne mniejsze opakowania). Wzorzec proponuje wspólny interfejs dla elementów prostych (liści) i złożonych (kontenerów), deklarujący operacje sensowne dla obu typów. Liść wykonuje pracę bezpośrednio, natomiast kontener nie zna konkretnych klas swojej zawartości - deleguje żądanie wszystkim elementom podrzędnym poprzez interfejs komponentu, zbiera wyniki pośrednie i zwraca wynik końcowy. Ponieważ kontener sam może zawierać inne kontenery, operacja wykonuje się rekurencyjnie po całym drzewie. Dzięki temu klient korzysta ze wszystkich elementów przez jeden wspólny interfejs i nie musi wiedzieć, czy ma do czynienia z prostym elementem, czy ze złożoną strukturą. Ograniczeniem jest to, że ustalenie jednego wspólnego interfejsu dla klas o bardzo różnych funkcjonalnościach bywa trudne i może wymagać jego nadmiernego uogólnienia.
+
 <div class="placeholder-box">
 
 </div>
