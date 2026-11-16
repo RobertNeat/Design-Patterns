@@ -1,0 +1,31 @@
+package design_patterns.strukturalne.most.zamowienie;
+
+//klasa 'wzbogacona abstrakcja'
+public class ZamowienieZDostawa extends RodzajZamowienia{
+    public ZamowienieZDostawa(RealizacjaZamowienia rezaliacja) {
+        super(rezaliacja);
+    }
+
+    @Override
+    public void info() {
+        System.out.println("Cena za km: 5 zl");
+        System.out.println("Czas dostawy: 20 min");
+        System.out.println("Miejsce w lokalu (stolik):"+false);
+
+        realizacja.info();//wywołanie metody z implementacji
+    }
+
+    @Override
+    public void przyjmijZamowienie() {
+        System.out.println("Przyjeto zamowienie do realizacji z dostawa");
+        //można wykonać metody z implementacji (jak w metodzie info)
+        //lub pozyskiwać wyliczone wartości z implementacji i na nich działać w abstrakcji
+    }
+
+    @Override
+    public void zrealizujZamowienie() {
+        System.out.println("Zrealizowano zamowienie do realizacji z dostawa");
+        //można wykonać metody a realizacji (jak w metodzie info)
+        //lub pozyskiwać wyliczone wartości z implementacji i na nich działać w abstrakcji
+    }
+}

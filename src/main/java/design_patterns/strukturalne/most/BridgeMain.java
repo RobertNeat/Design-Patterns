@@ -4,6 +4,10 @@ import design_patterns.strukturalne.most.definition.RefinedAbstraction;
 import design_patterns.strukturalne.most.definition.ConcreteImplementation_A;
 import design_patterns.strukturalne.most.definition.Abstraction;
 
+import design_patterns.strukturalne.most.zamowienie.EkspresowaRealizacja;
+import design_patterns.strukturalne.most.zamowienie.StandardowaRealizacja;
+import design_patterns.strukturalne.most.zamowienie.ZamowienieNaWynos;
+
 /*
 * Podział logiki na osobne hierarchie klas (abstrakcję i implementację) które następnie można rozwijać niezależnie od siebie.
 * Zamiast tworzyć m*n klas tworzy się m+n klas
@@ -19,6 +23,8 @@ import design_patterns.strukturalne.most.definition.Abstraction;
 * W java to klasa refined abstraction przechowuje instancję implementacji (ograniczenie technologiczne)
 *
 *
+* abstrakcja:  rodzaj zamówienia (na miejscu, na wynos, z dostawą)
+* implementacja:  realizacja (standardowo, priorytetowo, ekspresowo)
 *
  */
 public class BridgeMain {
@@ -27,8 +33,22 @@ public class BridgeMain {
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("bridge");
+        //stworzenie obiektu konkretnej implementacji
+        EkspresowaRealizacja ekspresowo = new EkspresowaRealizacja();
+        //stworzenie obiektu wzbogaconej abstrakcji
+        ZamowienieNaWynos na_wynos = new ZamowienieNaWynos(ekspresowo);
+
+        //wykonywanie działań na abstrakcji która wewnętrznie wywołuje metody implementacji
+        na_wynos.przyjmijZamowienie();
+
+        //wykonywanie działań zdefiniowanych w konkretnej abstrakcji
+        na_wynos.zrealizujZamowienie();
+
+        // Zmiana sposobu realizacji zamówienia (dodatkowy mechanizm rozszerzenia wzorca pozwalający na ponowne użycie abstrakcji jeśli potrzeba podmienić implementację i tym samym docelowe zachowanie w kodzie)
+        na_wynos.zmienRealizacje(new StandardowaRealizacja());
+
+        na_wynos.zrealizujZamowienie();
+
     }
 
 
@@ -44,5 +64,3 @@ public class BridgeMain {
         adv_ref_abs.perform_create_reset();
     }
 }
-
-//Rozdzielenie rodzaju zamówienia (na miejscu, na wynos, dostawa) od sposobu realizacji
