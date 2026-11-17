@@ -1,6 +1,5 @@
 package design_patterns.strukturalne.dekorator;
 
-
 /*
 * Pozwala owijać obiekty w dodatkowe zachowania (dekorowanie obiektów), klient wykonuje operajce na klasie bazowej
 *
@@ -16,10 +15,16 @@ import design_patterns.strukturalne.dekorator.definition.ComponentInterface;
 import design_patterns.strukturalne.dekorator.definition.ConcreteComponent;
 import design_patterns.strukturalne.dekorator.definition.ConcreteDecorator_Append;
 import design_patterns.strukturalne.dekorator.definition.ConcreteDecorator_Prepend;
+import design_patterns.strukturalne.dekorator.dodatki_dan.Danie;
+import design_patterns.strukturalne.dekorator.dodatki_dan.Dodatek;
+import design_patterns.strukturalne.dekorator.dodatki_dan.InterfejsDanie;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DecoratorMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run_abstract(){
@@ -33,8 +38,25 @@ public class DecoratorMain {
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("decorator");
+        //Dodatki do dań: dodatkowy ser, ostry sos, większa porcja, każdy zmienia cenę i opis
+
+        //interfejs komponentu: InterfejsDanie
+        //konkretny komponent: Danie
+        //bazowy dekorator: BazowyDekorator
+        //konkretni dekoratorzy: Dodatek
+
+        List<String> danie_makaronowe_skladniki =
+                new ArrayList<>(List.of("makaron", "sos"));
+
+        InterfejsDanie danie_1 = new Danie(danie_makaronowe_skladniki);
+        InterfejsDanie dodatkowy_ser = new Dodatek(danie_1, "ser");
+        InterfejsDanie dodatkowa_sol = new Dodatek(dodatkowy_ser,"sol");
+        InterfejsDanie dodatkowy_pieprz = new Dodatek(dodatkowa_sol,"pieprz");
+
+        System.out.println("Danie podstawowe: "+danie_1.execute());
+        System.out.println("Danie z dodatkowym serem: "+dodatkowy_ser.execute());
+        System.out.println("Danie z dodatkowym serem i sola: "+dodatkowa_sol.execute());
+        System.out.println("Danie z dodatkowym serem i sola i pieprzem: "+dodatkowy_pieprz.execute());
     }
 
 }
