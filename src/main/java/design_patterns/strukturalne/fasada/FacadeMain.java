@@ -13,6 +13,7 @@ package design_patterns.strukturalne.fasada;
 * */
 
 
+import design_patterns.strukturalne.fasada.definition.AdditionalFacade;
 import design_patterns.strukturalne.fasada.definition.Facade;
 
 public class FacadeMain {
@@ -51,8 +52,13 @@ public class FacadeMain {
         * }
         */
 
+        //fasada podstawowa - tworzy raporty i zapisuje
         Facade facade = new Facade();
-        facade.generateRaport("  Hello world!    ");
+        facade.generateAndSaveReport("  Hello world!    ");
+
+        //fasada rozszerzona - generuje podgląd raportu bez zapisywania
+        AdditionalFacade preview_facade = new AdditionalFacade(facade);
+        preview_facade.generatePreview("    PREVIEW ONLY!   ");
 
     }
 }

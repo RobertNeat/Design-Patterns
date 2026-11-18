@@ -18,17 +18,21 @@ public class Facade {
         saver = new ReportSaver();
     }
 
-    public void generateRaport(String input){
-        if(validator.validate(input)){
+    public String generateRaport(String input){
+        if(!validator.validate(input)) {
+            throw new IllegalStateException("Invalid input");
+        }
         String cleaned = cleaner.clean(input);
         String content = generator.generate(cleaned);
         String report = formatter.format(content);
-        System.out.println("Wynegerowany raport:\n"+report);
+        return report;
+    }
+
+    //rozdzielenie logiki generowania raportu od zapisywania pozwala użyć ponowanie części generowania raportu w dodatkowej fasadzie
+    public void generateAndSaveReport(String input){
+        String report = generateRaport(input);
+        System.out.println(report);
         saver.save(report);
-        }
-        else{
-            System.out.println("Raport could not be generated");
-        }
     }
 
 }
