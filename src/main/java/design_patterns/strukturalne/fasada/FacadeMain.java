@@ -4,11 +4,8 @@ package design_patterns.strukturalne.fasada;
 * Dodanie uproszczonego interfejsu do istniejącego systemu i ukrycie złożoności
 *
 * FASADA - deklaruje klasę o oproszczonym interfejsie, deleguje swoje zadania innym klasom, zarządza całym cyklem życia używanych przez siebie obiektów.
-* DODATKOWA FASADA -
-* ZŁOŻONY PODSYSTEM -
-*
-*
-*
+* DODATKOWA FASADA - rozszerza podstawową fasadę o dodatowe funkcjonalności albo wystawia inne zestawy metod
+* ZŁOŻONY PODSYSTEM - system z wieloma klasami i metodami, których używanie może być skomplikowane dla klienta
 *
 * */
 
