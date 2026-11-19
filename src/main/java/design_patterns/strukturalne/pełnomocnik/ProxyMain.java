@@ -10,18 +10,23 @@ package design_patterns.strukturalne.pełnomocnik;
 *
 * */
 
+import design_patterns.strukturalne.pełnomocnik.ceny_posilkow.AccessProxy;
+import design_patterns.strukturalne.pełnomocnik.ceny_posilkow.ZmienCenyPosilkowProxy;
 import design_patterns.strukturalne.pełnomocnik.definition.Proxy;
-import design_patterns.strukturalne.pełnomocnik.definition.Service;
 import design_patterns.strukturalne.pełnomocnik.definition.ServiceInterface;
 
 public class ProxyMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("proxy");
+        //Kontrola dostępu tylko menedżer może zmieniać ceny
+        AccessProxy proxy_user = new ZmienCenyPosilkowProxy("user");
+        proxy_user.zmienCenyPosilkow();
+
+        AccessProxy proxy_manager = new ZmienCenyPosilkowProxy("manager");
+        proxy_manager.zmienCenyPosilkow();
     }
 
 
