@@ -8,27 +8,26 @@ Terminalowa aplikacja prezentująca zastosowanie klasycznych wzorców projektowy
 
 Aplikacja jest podzielona na moduły względem typów wzorców:
 
-1. Kreacyjne
 
-| Wzorzec   | Zastosowanie w restauracji                                                  |
-| --------- | --------------------------------------------------------------------------- |
-| Singleton | Jedna wspólna konfiguracja restauracji: nazwa, stawka VAT, godziny otwarcia |
-| Factory   | Method Tworzenie dań zależnie od kategorii: zupa, danie główne, deser       |
-| Abstract  | Factory Całe zestawy menu zależnie od kuchni: włoska, polska, wegańska      |
-| Builder   | Składanie złożonego zamówienia: stolik, dania, uwagi, kod rabatowy, napiwek |
-| Prototype | Klonowanie gotowych zestawów, na przykład “lunch dnia”, z drobnymi zmianami |
+| KREACYJNE            | Tematyka                                                                                                      |
+|----------------------|---------------------------------------------------------------------------------------------------------------|
+| Metoda wytwórcza     | Tworzenie różnych klas dań (zup, przystawek, dań głównych, deserów)                                           |
+| Fabryka abstrakcyjna | Tworzenie zestawów dań (zup, przystawek, dań głównych, deserów) z różnych kuchni (niemiecka, polska, włoska)  |
+| Budowniczy           | Etapowe tworzenie dań                                                                                         |
+| Prototyp             | Klonowanie konkretnych potraw                                                                                 |
+| Singleton            | Przechowywanie globalnych właściwości restauracji                                                             |
 
-1. Strukturalne
 
-| Wzorzec   | Zastosowanie w restauracji                                                                       |
-| --------- | :----------------------------------------------------------------------------------------------- |
-| Adapter   | Integracja z zewnętrznym systemem płatności o niezgodnym interfejsie                             |
-| Bridge    | Rozdzielenie rodzaju zamówienia (na miejscu, na wynos, dostawa) od sposobu realizacji            |
-| Composite | Menu jako drzewo: kategorie zawierają dania i podkategorie, zestawy zawierają dania              |
-| Decorator | Dodatki do dań: dodatkowy ser, ostry sos, większa porcja, każdy zmienia cenę i opis              |
-| Facade    | Jeden prosty punkt wejścia do składania zamówienia, który ukrywa kuchnię, płatności i rabaty     |
-| Flyweight | Współdzielenie obiektów typu przepis, alergen, ikona dania między tysiącami pozycji              |
-| Proxy     | Kontrola dostępu i cache: na przykład tylko menedżer może zmieniać ceny, a menu jest cache’owane |
+| STRUKTURALNE  | Tematyka                                                                                                                  |
+|---------------|---------------------------------------------------------------------------------------------------------------------------|
+| Adapter       | Wykonywanie płatności w EUR za pomocą PLN (z przewalutowaniem w locie)                                                    |
+| Most          | Podział logiki rodzaju zamówienia (na miejscu, na wynos, z dostawą) od realizacji (standardowo, priorytetowo, ekspresowo) |
+| Kompozyt      | Wyznaczanie ilości poszczególnych składników na pokrycie całego menu                                                      |
+| Dekorator     | Dodawanie dodatkowych składników do dania (ser, sos, większa porcja) zmieniające stan dania                               |
+| Fasada        | Składanie zamówienia za pomocą jednego uproszczonego punktu wejścia                                                       |
+| Pyłek         | Współdzielenie alergenów w różnych konfiguracjach między potrawami                                                        |
+| Pełnomocnik   | Kontrola dostępu do zmian cen posiłków (jedynie rola managera)                                                            |
+
 
 1. Behawioralne
 

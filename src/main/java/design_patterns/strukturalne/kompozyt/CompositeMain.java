@@ -8,9 +8,6 @@ package design_patterns.strukturalne.kompozyt;
 * KOMPOZYT (node) - klasa opakowująca która zawiera inne kompozyty albo liście (lista jako pole klasy), komunikuje się ze swoją zawartością poprzez interfejs komponentu, jeśli otrzyma polecenie to deleguje zadania zwoim elementom podrzędnym i zwraca wynik zbiorczy (może wykonywać dodatkowe operacje na danych uzyskanych od swoich podelementów
 * LISC (leaf) -podstawowy element drzewa, który wykonuje docelowe operacje, nie posiadają elementów podrzędnych
 *
-*
-*
-*
 * */
 
 import design_patterns.strukturalne.kompozyt.definition.Leaf;
