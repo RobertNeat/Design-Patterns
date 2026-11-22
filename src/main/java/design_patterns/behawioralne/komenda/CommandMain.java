@@ -13,14 +13,55 @@ package design_patterns.behawioralne.komenda;
 * */
 
 import design_patterns.behawioralne.komenda.definition.*;
+import design_patterns.behawioralne.komenda.system_zamowien.*;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
 
 public class CommandMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run() {
-        //Operacje na zamówieniu jako obiekty, z możliwością cofnięcia: dodaj danie, usuń danie
+        //Przykład skladania zamowienia w którym klient może dodawać lub usuwać swoje pozycje, zamawiać dodatkowe dania
+
+        //KLASA NADAWCA
+        //bieżąca metoda
+
+        //interfejs POLECENIE
+        //InterfejsKomenda
+
+        //KONKRETNE POLECENIA
+        //DodajPozycjeKomenda
+        //UsunPozycjeKomenda
+
+        //KLASA ODBIORCA
+        //Zamowienie <--- zamowienie ktore trafia na kuchnie do realizacji
+
+        //HistoriaPozycji <-- jeśli klient się rozmyśli z danej pozycji
+
+        Zamowienie zamowienie = new Zamowienie();
+
+        HistoriaPozycji historia = new HistoriaPozycji();
+
+        InterfejsKomenda dodaj_zupa = new DodajPozycjeKomenda(zamowienie,"zupa");
+        historia.executeCommand(dodaj_zupa);
+
+        InterfejsKomenda dodaj_deser = new DodajPozycjeKomenda(zamowienie,"deser");
+        historia.executeCommand(dodaj_deser);
+
+        InterfejsKomenda usun_zupa = new UsunPozycjeKomenda(zamowienie,0);
+        historia.executeCommand(usun_zupa);
+
+        System.out.println(Arrays.toString(zamowienie.pozycjeZamowienia.toArray()));
+
+        historia.undoCommand();
+
+
+        System.out.println(Arrays.toString(zamowienie.pozycjeZamowienia.toArray()));
+
+
     }
 
     public static void run_abstract(){
