@@ -20,6 +20,7 @@ package design_patterns.behawioralne.iterator;
 
 
 import design_patterns.behawioralne.iterator.definition.BinaryTree;
+import design_patterns.behawioralne.iterator.definition.CircularList;
 import design_patterns.behawioralne.iterator.definition.InterfaceIterator;
 import design_patterns.behawioralne.iterator.definition.binary_tree.BinaryTreeNode;
 
@@ -33,7 +34,7 @@ public class IteratorMain {
     }
 
     public static void run_abstract(){
-        //stworzenie kolekcji drzewa binarnego (to nie część wzorca, tylko przygotowanie danych)
+        //1.stworzenie kolekcji drzewa binarnego (to nie część wzorca, tylko przygotowanie danych)
         BinaryTree<Integer> tree = new BinaryTree<>(10);
 
         //dodawanie węzłów do drzewa (to nie część wzorca, tylko przygotowanie danych)
@@ -55,6 +56,7 @@ public class IteratorMain {
 
         //stworzenie iteratora na drzewie binarnym za pomocą abstrakcji (klient nie wie jaki to iterator i jak przechodzi wewnętrznie po strukturze)
         InterfaceIterator<Integer> iterator = tree.createIterator();
+        System.out.println("-- Drzewo binarne");
 
         while (iterator.hasNext()) {
             System.out.println(iterator.next());
@@ -62,5 +64,27 @@ public class IteratorMain {
         //iterator wewnętrznie najpierw udaje się do node '3'
         //a później przez: 5 7 10 15 20
 
+
+        //--------------------------------------------------
+        //2. Kolekcja listy cyklicznej
+
+        //Stworzenie kolekcji
+        CircularList<Integer> list = new CircularList<>();
+
+        //dodanie elementów
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+
+        //Stworzenie iteratora
+        InterfaceIterator<Integer> iterator_list = list.createIterator();
+        System.out.println("-- Lista Cykliczna");
+
+        //przejście po kolekcji (nie różni się niczym od przejścia po drzewie bo używamy tego samego interfejsu iteratora)
+        while(iterator_list.hasNext()) {
+            System.out.println(iterator_list.next());
+        }
     }
 }
