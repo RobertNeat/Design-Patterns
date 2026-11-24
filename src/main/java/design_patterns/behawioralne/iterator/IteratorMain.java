@@ -4,10 +4,6 @@ package design_patterns.behawioralne.iterator;
 /*
 * Pozwala sekwencyjnie przechodzić po elementach kolekcji bez ujawniania jej struktury
 *
-* iterator - przechowuje zadania związane z przechodzeniem przez elementy kolekcji
-* iterator - hermetuzyje wszystkie szczegóły przechodzenia przez kolejne elementy
-* iterator - udostępnia metodę pobierającą elementy kolekcji
-*
 * interfejs ITERATOR - deklaruje działania niezbędne do sekwencyjnego przechodzenia przez elementy kolekcji
 * KONKRETNY ITERATOR - klasa implementująca specyficzny algorytm przeglądania kolekcji
 * interfejs KOLEKCJA - deklaruje przynajmniej jedną metodę która zwracaja typ zgodny z interfejsem iterator (tj. kolekcja zwraca swój iterator)
