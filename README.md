@@ -29,19 +29,26 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | Pełnomocnik   | Kontrola dostępu do zmian cen posiłków (jedynie rola managera)                                                            |
 
 
-1. Behawioralne
+| BEHAWIORALNE        | Tematyka                                                                                              |
+|---------------------|-------------------------------------------------------------------------------------------------------|
+| Łańcuch Zobowiązań  | Kolejne kroki walidacji i rabatów: poprawność zamówienia, dostępność składników, kod promocyjny       |
+| Polecenie           | Skladanie zamówienia, w którym klient może dodawać lub usuwać swoje pozycje, zamawiać dodatkowe dania |
+| Iterator            | -brak bo bazuje na strukturach danych-                                                                |
+| Mediator            | Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł                            |
+| Pamiątka            | Zapis i przywracanie stanu zamówienia podczas etapów przygotowywania                                  |
+| Obserwator          |                                                                                                       |
+| Stan                |                                                                                                       |
+| Strategia           |                                                                                                       |
+| Metoda szablonowa   |                                                                                                       |
+| Odwiedzający        |                                                                                                       |
+
 
 | Wzorzec     | Zastosowanie w restauracji                                                                                        |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | Strategy    | Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta                                      |
 | Observer    | Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia                                              |
 | State       | Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane                                           |
-| Command     | Operacje na zamówieniu jako obiekty, z możliwością cofnięcia: dodaj danie, usuń danie                             |
-| Chain       | of Responsibility Kolejne kroki walidacji i rabatów: poprawność zamówienia, dostępność składników, kod promocyjny |
 | Template    | Method Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii                                |
-| Iterator    | Przechodzenie po menu lub historii zamówień bez ujawniania struktury                                              |
-| Mediator    | Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł                                        |
-| Memento     | Zapis i przywracanie stanu zamówienia, na przykład wersja robocza lub cofnięcie zmian                             |
 | Visitor     | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny                     |
 | Interpreter | Prosty język reguł rabatowych, na przykład “WTOREK AND SUMA > 100 THEN 10%”                                       |
 
