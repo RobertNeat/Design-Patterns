@@ -14,15 +14,42 @@ import design_patterns.behawioralne.mediator.definition.ComponentClass_A;
 import design_patterns.behawioralne.mediator.definition.ComponentClass_B;
 import design_patterns.behawioralne.mediator.definition.ComponentClass_C;
 import design_patterns.behawioralne.mediator.definition.ConcreteMediator;
+import design_patterns.behawioralne.mediator.order_coordinator.Bar;
+import design_patterns.behawioralne.mediator.order_coordinator.Kelner;
+import design_patterns.behawioralne.mediator.order_coordinator.Kuchnia;
+import design_patterns.behawioralne.mediator.order_coordinator.OrderCoordinator;
 
 public class MediatorMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("mediator");
+
+        //Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł
+
+        //abstrakcja KOMPONENT: AbstractComponent
+        //klasy KOMPONENTY: Kelner, Kuchnia, Bar
+        //interfejs MEDIATOR: MediatorInterface
+        //KONKRETNI MEDIATORZY: OrderCoordinator
+
+        Kelner kelner = new Kelner();
+        Bar bar = new Bar();
+        Kuchnia kuchnia = new Kuchnia();
+
+        OrderCoordinator coordinator_1 = new OrderCoordinator(kelner,bar,kuchnia);
+
+        kelner.setMediator(coordinator_1);
+        bar.setMediator(coordinator_1);
+        kuchnia.setMediator(coordinator_1);
+
+        kelner.performActionKelner(123);
+
+
+        //dodatkowe wywołanie, na przykład klient sam zamówił przy barze
+        bar.performActionBar("zamowienie indywidualne dodatkowe");
+
+
     }
 
 
