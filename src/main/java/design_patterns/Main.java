@@ -2,7 +2,7 @@ package design_patterns;
 
 import design_patterns.behawioralne.iterator.IteratorMain;
 import design_patterns.behawioralne.komenda.CommandMain;
-import design_patterns.behawioralne.maszyna_stanu.StateMain;
+import design_patterns.behawioralne.stan.StateMain;
 import design_patterns.behawioralne.mediator.MediatorMain;
 import design_patterns.behawioralne.metoda_szablonowa.TemplateMethodMain;
 import design_patterns.behawioralne.obserwator.ObserverMain;
