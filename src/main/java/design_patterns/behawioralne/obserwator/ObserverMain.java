@@ -11,15 +11,37 @@ package design_patterns.behawioralne.obserwator;
 * */
 
 import design_patterns.behawioralne.obserwator.definition.*;
+import design_patterns.behawioralne.obserwator.order_status.KelnerSubscriber;
+import design_patterns.behawioralne.obserwator.order_status.Klientsubscriber;
+import design_patterns.behawioralne.obserwator.order_status.KuchniaSubskrybent;
+import design_patterns.behawioralne.obserwator.order_status.StatusTrackerPublisher;
 
 public class ObserverMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("observer");
+        //Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia
+
+        StatusTrackerPublisher statusTracker = new StatusTrackerPublisher(); //wersja ze wspólną abstrakcją dla publikujących
+
+        KelnerSubscriber kelner = new KelnerSubscriber();
+        KuchniaSubskrybent kuchnia = new KuchniaSubskrybent();
+        Klientsubscriber klient_1 = new Klientsubscriber();
+        Klientsubscriber klient_2 = new Klientsubscriber();
+
+        statusTracker.subscribe(kelner);
+        statusTracker.subscribe(kuchnia);
+        statusTracker.subscribe(klient_1);
+        statusTracker.subscribe(klient_2);
+
+        statusTracker.zmienStatusDania("rozpoczeto",10);
+
+        statusTracker.unsubscribe(kelner);
+
+        statusTracker.zmienStatusDania("wykonano",100);
+
     }
 
 
