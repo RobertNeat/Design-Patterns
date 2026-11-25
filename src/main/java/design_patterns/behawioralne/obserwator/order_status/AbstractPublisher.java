@@ -3,7 +3,7 @@ package design_patterns.behawioralne.obserwator.order_status;
 import java.util.ArrayList;
 
 //wydzielenie zachowania subskrybcji do abstrakcji zamiast publisherinterface względem klasycznego podejścia
-public abstract class AbstractPublisher {
+public abstract class AbstractPublisher implements PublisherInterface{
     private ArrayList<SubscriberInterface> subscribers;
 
     public AbstractPublisher(){

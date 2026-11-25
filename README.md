@@ -36,7 +36,7 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | Iterator            | -brak bo bazuje na strukturach danych-                                                                |
 | Mediator            | Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł                            |
 | Pamiątka            | Zapis i przywracanie stanu zamówienia podczas etapów przygotowywania                                  |
-| Obserwator          |                                                                                                       |
+| Obserwator          | Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia                                  |
 | Stan                |                                                                                                       |
 | Strategia           |                                                                                                       |
 | Metoda szablonowa   |                                                                                                       |
@@ -46,7 +46,6 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | Wzorzec     | Zastosowanie w restauracji                                                                                        |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | Strategy    | Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta                                      |
-| Observer    | Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia                                              |
 | State       | Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane                                           |
 | Template    | Method Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii                                |
 | Visitor     | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny                     |
