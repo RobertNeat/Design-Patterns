@@ -13,13 +13,136 @@ package design_patterns.behawioralne.stan;
 
 import design_patterns.behawioralne.stan.definition.Context;
 import design_patterns.behawioralne.stan.definition.State_A;
+import design_patterns.behawioralne.stan.order_lifecycle.Order;
+
+import java.util.List;
 
 public class StateMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
-    public static void run() {}
+    public static void run() {
+        //Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane
+
+        //kontekst: Order
+        //interfejs stanu: OrderState
+        //konkretne stany: NewState, PreparingState, ReadyState, DeliveredState, CancelledState
+
+        //Definicje stanów:
+        // Nowe (New) – zamówienie zostało złożone i oczekuje na rozpoczęcie przygotowania.
+        //--- Zamówienie zostało przyjęte przez restaurację.
+        //--- Zamówienie oczekuje na rozpoczęcie przygotowania przez kuchnię.
+        //--- Można rozpocząć przygotowywanie zamówienia.
+        //--- Nie można oznaczyć zamówienia jako gotowe, ponieważ nie rozpoczęto jego przygotowania.
+        //--- Nie można wydać zamówienia, ponieważ nie zostało jeszcze przygotowane.
+        //--- Zamówienie może zostać anulowane.
+
+        // W przygotowaniu (InPreparation) – kuchnia rozpoczęła przygotowywanie zamówienia.
+        //--- Zamówienie zostało przekazane do realizacji przez kuchnię.
+        //--- Kuchnia aktualnie przygotowuje zamówienie.
+        //--- Nie można ponownie rozpocząć przygotowywania zamówienia, ponieważ już trwa.
+        //--- Można oznaczyć zamówienie jako gotowe po zakończeniu przygotowywania.
+        //--- Nie można wydać zamówienia, ponieważ nie zostało jeszcze przygotowane.
+        //--- Zamówienie może zostać anulowane.
+
+        //Gotowe (Ready) – zamówienie zostało przygotowane i oczekuje na odbiór.
+        //--- Kuchnia zakończyła przygotowywanie zamówienia.
+        //--- Zamówienie oczekuje na odbiór.
+        //--- Klient może odebrać zamówienie.
+        //--- Zamówienie może zostać anulowane.
+
+        //Wydane (Delivered) – zamówienie zostało odebrane przez klienta.
+        //--- Klient odebrał zamówienie.
+        //--- Zamówienie zostało zrealizowane.
+        //--- Nie można ponownie przygotowywać zamówienia.
+        //--- Nie można ponownie oznaczyć go jako gotowe.
+        //--- Nie można ponownie wydać zamówienia.
+        //--- Nie można anulować zamówienia, które zostało już wydane.
+
+        //Anulowane (Cancelled) – zamówienie zostało anulowane.
+        //--- Zamówienie zostało anulowane.
+        //--- Nie można rozpocząć jego przygotowania.
+        //--- Nie można oznaczyć go jako gotowe.
+        //--- Nie można wydać go klientowi.
+        //--- Nie można ponownie anulować zamówienia.
+
+
+        // ==========================================
+        // SCENARIUSZ 1: Standardowa realizacja zamówienia
+        // ==========================================
+
+        System.out.println("\n========== SCENARIUSZ 1 ==========");
+
+        Order order1 = new Order(
+                "Jan Kowalski",
+                List.of("Pizza Margherita", "Cola")
+        );
+
+        // 1. Zamówienie zostaje złożone (NewState)
+        order1.displayOrderInfo();
+
+        // 2. Kuchnia rozpoczyna przygotowanie
+        order1.startPreparation();
+        order1.displayOrderInfo();
+
+        // 3. Kuchnia kończy przygotowanie
+        order1.markAsReady();
+        order1.displayOrderInfo();
+
+        // 4. Kelner wydaje zamówienie klientowi
+        order1.deliver();
+        order1.displayOrderInfo();
+
+
+        // ==========================================
+        // SCENARIUSZ 2: Anulowanie podczas przygotowania
+        // ==========================================
+
+        System.out.println("\n========== SCENARIUSZ 2 ==========");
+
+        Order order2 = new Order(
+                "Anna Nowak",
+                List.of("Burger", "Frytki", "Sok")
+        );
+
+        // 1. Zamówienie zostaje złożone
+        order2.displayOrderInfo();
+
+        // 2. Kuchnia rozpoczyna przygotowanie
+        order2.startPreparation();
+
+        // 3. Klient anuluje zamówienie
+        order2.cancel("Zmowienie anulowane przez klienta");
+
+        order2.displayOrderInfo();
+
+
+        // ==========================================
+        // SCENARIUSZ 3: Próba niedozwolonej operacji
+        // ==========================================
+
+        System.out.println("\n========== SCENARIUSZ 3 ==========");
+
+        Order order3 = new Order(
+                "Piotr Wiśniewski",
+                List.of("Spaghetti", "Woda")
+        );
+
+        // Realizacja zamówienia
+        order3.startPreparation();
+        order3.markAsReady();
+        order3.deliver();
+
+        // Próba anulowania wydanego zamówienia
+        try {
+            order3.cancel("Zamowienie anulowane przez klienta");
+        } catch (IllegalStateException e) {
+            System.out.println("ERROR: " + e.getMessage());
+        }
+
+        order3.displayOrderInfo();
+    }
 
     public static void run_abstract() {
         // Inicjalizacja Context z początkowym stanem State_A
