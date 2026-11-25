@@ -37,16 +37,14 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | Mediator            | Koordynacja komunikacji między kelnerem, kuchnią i barem przez jeden węzeł                            |
 | Pamiątka            | Zapis i przywracanie stanu zamówienia podczas etapów przygotowywania                                  |
 | Obserwator          | Powiadamianie kuchni, kelnera i klienta o zmianie statusu zamówienia                                  |
-| Stan                |                                                                                                       |
-| Strategia           |                                                                                                       |
+| Stan                | Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane                               |
+| Strategia           | Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta                          |
 | Metoda szablonowa   |                                                                                                       |
 | Odwiedzający        |                                                                                                       |
 
 
 | Wzorzec     | Zastosowanie w restauracji                                                                                        |
 | ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| Strategy    | Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta                                      |
-| State       | Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane                                           |
 | Template    | Method Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii                                |
 | Visitor     | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny                     |
 | Interpreter | Prosty język reguł rabatowych, na przykład “WTOREK AND SUMA > 100 THEN 10%”                                       |
