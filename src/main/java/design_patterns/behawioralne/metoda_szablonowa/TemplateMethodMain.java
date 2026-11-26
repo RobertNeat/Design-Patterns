@@ -16,15 +16,38 @@ package design_patterns.behawioralne.metoda_szablonowa;
 import design_patterns.behawioralne.metoda_szablonowa.definition.AbstractTemplate;
 import design_patterns.behawioralne.metoda_szablonowa.definition.ConcreteTamplate_A;
 import design_patterns.behawioralne.metoda_szablonowa.definition.ConcreteTemplate_B;
+import design_patterns.behawioralne.metoda_szablonowa.dish_preparation.AbstractDishPreparation;
+import design_patterns.behawioralne.metoda_szablonowa.dish_preparation.PizzaPreparation;
+import design_patterns.behawioralne.metoda_szablonowa.dish_preparation.SoupPreparation;
+import design_patterns.behawioralne.metoda_szablonowa.dish_preparation.SteakPreparation;
 
 public class TemplateMethodMain {
     public static void main(String[] args){
-        run_abstract();
+        run();
     }
 
     public static void run() {
-        //demonstracja wzorca
-        System.out.println("template_method");
+        //Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii
+
+        //KLASA ABSTRAKCYJNA: AbstractDishPreparation
+        //KONKRETNE KLASY: PizzaPreparation, SoupPreparation, SteakPreparation
+
+        //przygotowanie pizzy wymaga wyrobienia ciasta, przygotowania sosu i dodatków, a następnie wypieku
+        //przygotowanie zupy wymaga natomiast przygotowania warzyw, wykonania wywaru i ugotowania składników
+        //przygotowanie steku obejmuje przygotowanie mięsa, jego odpowiednie przyprawienie, obróbkę termiczną na patelni lub grillu oraz odpoczynek mięsa przed podaniem
+
+        AbstractDishPreparation pizza = new PizzaPreparation();
+        AbstractDishPreparation soup = new SoupPreparation();
+        AbstractDishPreparation steak = new SteakPreparation();
+
+        System.out.println("-- Prepare pizza: --");
+        pizza.prepareDish();
+
+        System.out.println("-- Prepare soup: --");
+        soup.prepareDish();
+
+        System.out.println("-- Prepare steak: --");
+        steak.prepareDish();
     }
 
 
