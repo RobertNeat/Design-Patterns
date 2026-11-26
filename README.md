@@ -12,10 +12,10 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | KREACYJNE            | Tematyka                                                                                                      | 
 |----------------------|---------------------------------------------------------------------------------------------------------------|
 | [Metoda wytwórcza](/src/main/java/design_patterns/kreacyjne/metoda_wytwórcza/definition)     | Tworzenie różnych klas dań (zup, przystawek, dań głównych, deserów)                                           | 
-| Fabryka abstrakcyjna | Tworzenie zestawów dań (zup, przystawek, dań głównych, deserów) z różnych kuchni (niemiecka, polska, włoska)  |
-| Budowniczy           | Etapowe tworzenie dań                                                                                         |
-| Prototyp             | Klonowanie konkretnych potraw                                                                                 |
-| Singleton            | Przechowywanie globalnych właściwości restauracji                                                             |
+| [Fabryka abstrakcyjna](/src/main/java/design_patterns/kreacyjne/fabryka_abstrakcyjna/definition) | Tworzenie zestawów dań (zup, przystawek, dań głównych, deserów) z różnych kuchni (niemiecka, polska, włoska)  |
+| [Budowniczy](/src/main/java/design_patterns/kreacyjne/budowniczy/definition)           | Etapowe tworzenie dań                                                                                         |
+| [Prototyp](/src/main/java/design_patterns/kreacyjne/prototyp/definitio)             | Klonowanie konkretnych potraw                                                                                 |
+| [Singleton](/src/main/java/design_patterns/kreacyjne/singleto/definition)            | Przechowywanie globalnych właściwości restauracji                                                             |
 
 
 | STRUKTURALNE  | Tematyka                                                                                                                  |
