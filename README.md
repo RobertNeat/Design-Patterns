@@ -14,19 +14,19 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | [Metoda wytwórcza](/src/main/java/design_patterns/kreacyjne/metoda_wytwórcza/definition)     | Tworzenie różnych klas dań (zup, przystawek, dań głównych, deserów)                                           | 
 | [Fabryka abstrakcyjna](/src/main/java/design_patterns/kreacyjne/fabryka_abstrakcyjna/definition) | Tworzenie zestawów dań (zup, przystawek, dań głównych, deserów) z różnych kuchni (niemiecka, polska, włoska)  |
 | [Budowniczy](/src/main/java/design_patterns/kreacyjne/budowniczy/definition)           | Etapowe tworzenie dań                                                                                         |
-| [Prototyp](/src/main/java/design_patterns/kreacyjne/prototyp/definitio)             | Klonowanie konkretnych potraw                                                                                 |
-| [Singleton](/src/main/java/design_patterns/kreacyjne/singleto/definition)            | Przechowywanie globalnych właściwości restauracji                                                             |
+| [Prototyp](/src/main/java/design_patterns/kreacyjne/prototyp/definition)             | Klonowanie konkretnych potraw                                                                                 |
+| [Singleton](/src/main/java/design_patterns/kreacyjne/singleton/definition)            | Przechowywanie globalnych właściwości restauracji                                                             |
 
 
 | STRUKTURALNE  | Tematyka                                                                                                                  |
 |---------------|---------------------------------------------------------------------------------------------------------------------------|
-| Adapter       | Wykonywanie płatności w EUR za pomocą PLN (z przewalutowaniem w locie)                                                    |
-| Most          | Podział logiki rodzaju zamówienia (na miejscu, na wynos, z dostawą) od realizacji (standardowo, priorytetowo, ekspresowo) |
-| Kompozyt      | Wyznaczanie ilości poszczególnych składników na pokrycie całego menu                                                      |
-| Dekorator     | Dodawanie dodatkowych składników do dania (ser, sos, większa porcja) zmieniające stan dania                               |
-| Fasada        | Składanie zamówienia za pomocą jednego uproszczonego punktu wejścia                                                       |
-| Pyłek         | Współdzielenie alergenów w różnych konfiguracjach między potrawami                                                        |
-| Pełnomocnik   | Kontrola dostępu do zmian cen posiłków (jedynie rola managera)                                                            |
+| [Adapter](/src/main/java/design_patterns/strukturalne/adapter/definition)       | Wykonywanie płatności w EUR za pomocą PLN (z przewalutowaniem w locie)                                                    |
+| [Most](/src/main/java/design_patterns/strukturalne/most/definition)          | Podział logiki rodzaju zamówienia (na miejscu, na wynos, z dostawą) od realizacji (standardowo, priorytetowo, ekspresowo) |
+| [Kompozyt](/src/main/java/design_patterns/strukturalne/kompozyt/definition)      | Wyznaczanie ilości poszczególnych składników na pokrycie całego menu                                                      |
+| [Dekorator](/src/main/java/design_patterns/strukturalne/dekorator/definition)     | Dodawanie dodatkowych składników do dania (ser, sos, większa porcja) zmieniające stan dania                               |
+| [Fasada](/src/main/java/design_patterns/strukturalne/fasada/definition)        | Składanie zamówienia za pomocą jednego uproszczonego punktu wejścia                                                       |
+| [Pyłek](/src/main/java/design_patterns/strukturalne/pylek/definition)         | Współdzielenie alergenów w różnych konfiguracjach między potrawami                                                        |
+| [Pełnomocnik](/src/main/java/design_patterns/strukturalne/pelnomocnik/definition)   | Kontrola dostępu do zmian cen posiłków (jedynie rola managera)                                                            |
 
 
 | BEHAWIORALNE        | Tematyka                                                                                              |
