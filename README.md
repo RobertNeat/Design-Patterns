@@ -47,6 +47,5 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | ----------- | ----------------------------------------------------------------------------------------------------------------- |
 | Template    | Method Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii                                |
 | Visitor     | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny                     |
-| Interpreter | Prosty język reguł rabatowych, na przykład “WTOREK AND SUMA > 100 THEN 10%”                                       |
 
 W /docs można znaleźc notatki do poszczególnych wzorców.
