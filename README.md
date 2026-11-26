@@ -40,11 +40,6 @@ Aplikacja jest podzielona na moduły względem typów wzorców:
 | Stan                | Cykl życia zamówienia: nowe, w przygotowaniu, gotowe, wydane, anulowane                               |
 | Strategia           | Wybór rodzaju zniżki: procentowa, kwotowa, happy hour, karta stałego klienta                          |
 | Metoda szablonowa   | Wspólny szkielet przygotowania dania z różnymi krokami dla każdej kategorii                           |
-| Odwiedzający        |                                                                                                       |
-
-
-| Wzorzec     | Zastosowanie w restauracji                                                                                        |
-| ----------- | ----------------------------------------------------------------------------------------------------------------- |
-| Visitor     | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny                     |
+| Odwiedzający        | Operacje na elementach menu bez zmiany ich klas: kalkulacja kalorii, raport alergenów, wyceny         |
 
 W /docs można znaleźc notatki do poszczególnych wzorców.
