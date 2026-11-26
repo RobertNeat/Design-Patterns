@@ -9,9 +9,9 @@ Terminalowa aplikacja prezentująca zastosowanie klasycznych wzorców projektowy
 Aplikacja jest podzielona na moduły względem typów wzorców:
 
 
-| KREACYJNE            | Tematyka                                                                                                      |
+| KREACYJNE            | Tematyka                                                                                                      | 
 |----------------------|---------------------------------------------------------------------------------------------------------------|
-| Metoda wytwórcza     | Tworzenie różnych klas dań (zup, przystawek, dań głównych, deserów)                                           |
+| [Metoda wytwórcza](/src/main/java/design_patterns/kreacyjne/metoda_wytwórcza/definition)     | Tworzenie różnych klas dań (zup, przystawek, dań głównych, deserów)                                           | 
 | Fabryka abstrakcyjna | Tworzenie zestawów dań (zup, przystawek, dań głównych, deserów) z różnych kuchni (niemiecka, polska, włoska)  |
 | Budowniczy           | Etapowe tworzenie dań                                                                                         |
 | Prototyp             | Klonowanie konkretnych potraw                                                                                 |
